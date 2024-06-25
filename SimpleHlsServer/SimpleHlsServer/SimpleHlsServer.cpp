@@ -38,6 +38,7 @@ int main() {
 	int port = 8080;
 	LOG_I("1-hlsServer http://127.0.0.1:%d/index.m3u8\n", port);
 
+	//初始化WSA
 	WSADATA wsaData;
 	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0)
 	{
@@ -45,17 +46,22 @@ int main() {
 		return -1;
 	}
 
+	//创建套接字
 	SOCKET serverFd;
+	serverFd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	
+	//绑定IP和端口号
 	SOCKADDR_IN server_addr;
 	server_addr.sin_family = AF_INET;
 	server_addr.sin_addr.S_un.S_addr = htonl(INADDR_ANY);
 	//server_addr.sin_addr.s_addr = inet_addr("192.168.2.61");
 	server_addr.sin_port = htons(port);
-	serverFd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	if (bind(serverFd, (SOCKADDR*)&server_addr, sizeof(SOCKADDR)) == SOCKET_ERROR) {
 		LOG_E("socket bind error\n");
 		return -1;
 	}
+
+	//开始监听
 	if (listen(serverFd, SOMAXCONN) < 0) {
 		LOG_E("socket listen error\n");
 		return -1;

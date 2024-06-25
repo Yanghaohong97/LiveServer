@@ -5,7 +5,7 @@
 #include "Utils/Log.h"
 #include "Utils/Utils.h"
 
-#pragma warning(disable: 4996)
+#pragma warning(disable: 4996) //禁用fopen的警告选项_CRT_SECURE_NO_WARNINGS
 #include <WinSock2.h>
 #include <WS2tcpip.h>
 
