@@ -56,6 +56,10 @@ int main() {
 		"Pragma: no-cache\r\n" \
 		"\r\n"
 		;
+	//"Content-Type: video/x-flv\r\n":因为数据是flv格式
+	//"Content-Length: -1\r\n":这是区别HLS的，因为Http-flv一直发送数据，所以长度定义为-1
+	//"Connection: Keep-Alive\r\n" :因为Http-flv一直发送数据.所以要保持不断开
+
 	int http_headers_len = strlen(http_headers);
 
 	/*
@@ -106,6 +110,7 @@ constexpr char http_headers[] = \
 			while (true) {
 				times++;
 
+				//第一次的时候发送http_headers，然后就可以开始源源不断发送flv数据
 				if (times == 1) {
 					int bufRecvSize = recv(clientFd, bufRecv, 2000, 0);
 					printf("bufRecvSize=%d,bufRecv=%s\n", bufRecvSize, bufRecv);
@@ -120,6 +125,7 @@ constexpr char http_headers[] = \
 					//                        fseek(srcFile, 0, SEEK_CUR);
 					int ret = send(clientFd, (char*)buf, bufLen, 0);
 
+					//直到读取flv文件的数据为空后，退出循环，结束发送
 					if (ret <= 0) {
 						break;
 					}
