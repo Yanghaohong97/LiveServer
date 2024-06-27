@@ -36,7 +36,7 @@ int main() {
 
 
 	int port = 8080;
-	LOG_I("1-hlsServer http://127.0.0.1:%d/index.m3u8\n", port);
+	LOG_I("SimpleHlsServer http://127.0.0.1:%d/index.m3u8\n", port);
 
 	//初始化WSA
 	WSADATA wsaData;
