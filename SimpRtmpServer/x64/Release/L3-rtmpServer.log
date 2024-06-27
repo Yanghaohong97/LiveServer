@@ -1,0 +1,108 @@
+﻿  main.cpp
+  Acceptor.cpp
+  BufferReader.cpp
+  BufferWriter.cpp
+  EpollTaskScheduler.cpp
+  EventLoop.cpp
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\net\EventLoop.cpp(65,24): warning C4834: 放弃具有 "nodiscard" 属性的函数的返回值
+  Logger.cpp
+  MemoryManager.cpp
+  NetInterface.cpp
+  Pipe.cpp
+  Process.cpp
+  SelectTaskScheduler.cpp
+  SocketUtil.cpp
+  TaskScheduler.cpp
+  TcpConnection.cpp
+  TcpServer.cpp
+  TcpSocket.cpp
+  Timer.cpp
+  Timestamp.cpp
+  amf.cpp
+  正在编译...
+  H264Parser.cpp
+  RtmpChunk.cpp
+  RtmpClient.cpp
+  RtmpConnection.cpp
+  RtmpHandshake.cpp
+  RtmpPublisher.cpp
+  RtmpServer.cpp
+  RtmpSession.cpp
+  mongoose.c
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(413,40): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(1371,31): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(1389,30): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(1569,15): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(1579,15): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(1855,31): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(3305,1): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(3359,51): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(3735,17): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(3742,33): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(3749,17): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(3763,35): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(3762,25): warning C4267: “初始化”: 从“size_t”转换到“socklen_t”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(6168,26): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(6321,20): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(6416,49): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(6459,40): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(7070,23): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(7216,42): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(7292,43): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(7292,54): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(7311,20): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(7365,43): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(7411,21): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(7445,53): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(7472,45): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(7473,45): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(7906,26): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(7981,35): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(8107,45): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(8107,69): warning C4244: “函数”: 从“__int64”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(8265,48): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(8675,43): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(8838,22): warning C4244: “函数”: 从“sock_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(8895,54): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(8895,69): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(9198,54): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(9207,63): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(9279,55): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(9316,22): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(9357,44): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10065,21): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10080,19): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10086,35): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10147,47): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10449,10): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10441,21): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10764,17): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10916,25): warning C4244: “函数”: 从“__int64”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10933,14): warning C4267: “=”: 从“size_t”转换到“uint16_t”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10945,14): warning C4267: “=”: 从“size_t”转换到“uint16_t”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10946,14): warning C4267: “=”: 从“size_t”转换到“uint16_t”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10957,16): warning C4267: “=”: 从“size_t”转换到“uint16_t”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(10961,14): warning C4267: “=”: 从“size_t”转换到“uint16_t”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11024,21): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11006,24): warning C4267: “初始化”: 从“size_t”转换到“uint16_t”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11045,17): warning C4267: “=”: 从“size_t”转换到“uint16_t”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11062,34): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11085,17): warning C4267: “=”: 从“size_t”转换到“uint16_t”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11412,62): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11429,10): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11439,10): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11455,11): warning C4244: “=”: 从“__int64”转换到“unsigned char”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11468,18): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11517,18): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11552,27): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11655,26): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11712,56): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(11721,32): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\mongoose\mongoose.c(16114,32): warning C4273: “rmdir”: dll 链接不一致
+D:\Windows Kits\10\Include\10.0.22000.0\ucrt\direct.h(120,26): message : 参见“rmdir”的前一个定义
+    正在创建库 D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\x64\Release\SimpleRtmpServer.lib 和对象 D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\x64\Release\SimpleRtmpServer.exp
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 3910 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  L3-rtmpServer.vcxproj -> D:\WorkSpace\VisualStudio\LiveServer\SimpRtmpServer\x64\Release\SimpleRtmpServer.exe
