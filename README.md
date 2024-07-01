@@ -32,6 +32,6 @@
 
 
 # HpHttpFlvServer
-实现一个高性能的HTTP-FLV流媒体服务器
+使用boost库实现一个高性能的HTTP-FLV流媒体服务器
 
 
