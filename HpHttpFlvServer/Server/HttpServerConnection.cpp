@@ -25,6 +25,7 @@ std::string HttpServerConnection::getSession() {
 
 void HttpServerConnection::run()
 {
+    //异步读取，触发请求的时候把数据写入mHttpRequest
     http::async_read(
         mSocket,
         mTempBuffer,
@@ -40,6 +41,7 @@ void HttpServerConnection::run()
                 m_disconnectionCallback(m_arg, mSession);
             }
             else {
+                //读取到数据后开始处理
                 this->handle();
             }
         });
@@ -56,14 +58,16 @@ void HttpServerConnection::run()
 }
 void HttpServerConnection::handle()
 {
+    //设置Http响应的版本和服务类型
     mHttpResponse.version(mHttpRequest.version());
     mHttpResponse.set(http::field::server, "Boost");
 
+    //根据请求的方法作对应处理
     switch (mHttpRequest.method())
     {
     case http::verb::get:
     {
-
+        //判断请求的url是不是test.flv
         if (mHttpRequest.target() == "/test.flv")
         {
             mHttpResponse.result(http::status::ok);
@@ -75,6 +79,7 @@ void HttpServerConnection::handle()
             mHttpResponse.set(http::field::pragma, "no-cache");
             mHttpResponse.content_length(-1);
 
+            //异步响应Http请求
             http::async_write(
                 mSocket,
                 mHttpResponse,
@@ -93,8 +98,9 @@ void HttpServerConnection::handle()
                         //const char* filename = "../data/test.flv";
                         const char* filename = "../data/笑傲江湖天地作合.flv";
 
+                        //读取flv文件
                         fp = fopen(filename, "rb");
-
+                        //往HTTP请求里一直写入文件内容
                         this->keepWrite();
 
                     }
@@ -164,7 +170,7 @@ void HttpServerConnection::handle()
 void HttpServerConnection::keepWrite() {
     char data[5000];
     int  size;
-
+    //每次读取5000字节
     size = fread(data, 1, sizeof(data), fp);
     if (size > 0) {
         boost::asio::async_write(
@@ -179,7 +185,7 @@ void HttpServerConnection::keepWrite() {
                     m_disconnectionCallback(m_arg, mSession);
                 }
                 else {
-                    //发送成功
+                    //发送成功，就继续写入
                     //LOGI("keepWrite successs");
                     this->keepWrite();
                 }
@@ -187,6 +193,7 @@ void HttpServerConnection::keepWrite() {
             });
     }
     else {
+        //文件读取完后，断开连接
         LOGE("keepWrite error,msg= flv buffer finish");
         m_disconnectionCallback(m_arg, mSession);
     }

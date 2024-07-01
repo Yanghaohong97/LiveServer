@@ -8,6 +8,7 @@ Config::Config(const char* file) : mFile(file)
 {
     std::ifstream ifs(mFile, std::ios::binary);
 
+    //检查文件是否存在
     if (!ifs.is_open()) {
         LOGE("open %s error", file);
         return;

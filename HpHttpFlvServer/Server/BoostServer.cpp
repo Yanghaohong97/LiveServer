@@ -8,6 +8,7 @@ BoostServer::BoostServer(Config* config) : mConfig(config)
 
 }
 BoostServer::~BoostServer() {
+	//销毁资源
 	if (mAcceptor) {
 		delete mAcceptor;
 		mAcceptor = nullptr;
@@ -19,10 +20,12 @@ BoostServer::~BoostServer() {
 }
 void BoostServer::start()
 {
+	//根据config配置在启动的时候指定线程数
 	int threadNum = std::max<int>(1, mConfig->getThreadNum());
 	unsigned short port = mConfig->getPort();
 	LOGI("BoostServer::start() ip=%s,port=%d,threadNum=%d", mConfig->getIp() , port, threadNum);
 
+	//转成boost库的地址（包括IP、IPV4/IPV6协议等）
 	boost::asio::ip::address address = net::ip::make_address(mConfig->getIp());
 	tcp::endpoint endpoint{ address, port };
 
@@ -30,35 +33,41 @@ void BoostServer::start()
 	mAcceptor = new tcp::acceptor(*mIoc);
 
 	beast::error_code ec;
+	//判断是否支持地址对应的协议
 	mAcceptor->open(endpoint.protocol(), ec);
 	if (ec)
 	{
 		LOGE("acceptor.open error: %s", ec.message().data());
 		return;
 	}
+	//设置地址重用
 	mAcceptor->set_option(net::socket_base::reuse_address(true), ec);
 	if (ec)
 	{
 		LOGE("acceptor.set_option error: %s", ec.message().data());
 		return;
 	}
+	//绑定
 	mAcceptor->bind(endpoint, ec);
 	if (ec)
 	{
 		LOGE("acceptor.bind error: %s", ec.message().data());
 		return;
 	}
+	//监听
 	mAcceptor->listen(net::socket_base::max_listen_connections, ec);
 	if (ec)
 	{
 		LOGE("acceptor.listen error: %s", ec.message().data());
 		return;
 	}
+	//设置接收请求
 	setOnAccept();
 
+	//创建线程容器，方便管理
 	std::vector<std::thread> ts;
 	ts.reserve(threadNum - 1);
-
+	//用io_context按配置启动多线程
 	for (auto i = 0; i < threadNum - 1; ++i)
 	{
 		ts.emplace_back([this] {
@@ -75,6 +84,7 @@ void BoostServer::start()
 
 void BoostServer::setOnAccept()
 {
+	//异步接收请求，接收成功后回调onAccept
 	mAcceptor->async_accept(net::make_strand(*mIoc),
 		beast::bind_front_handler(&BoostServer::onAccept, this));
 }
@@ -87,6 +97,7 @@ void BoostServer::onAccept(beast::error_code ec, tcp::socket socket)
 	}
 	else
 	{
+		//创建新连接，添加连接，然后设置断连回调，开始运行
 		HttpServerConnection* conn = new HttpServerConnection(this, socket);
 		if (this->addConn(conn)) {
 			conn->setDisconnectionCallback(BoostServer::cbDisconnection, this);
@@ -98,6 +109,7 @@ void BoostServer::onAccept(beast::error_code ec, tcp::socket socket)
 		}
 
 	}
+	//重新触发接收请求
 	setOnAccept();
 }
 
